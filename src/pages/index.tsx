@@ -1,20 +1,21 @@
-import React from 'react'
 import Head from 'next/head'
-
-import RocketseatLogo from '../assets/rocketseat.svg'
 
 import { Container } from '../styles/pages/Home'
 
-const Home: React.FC = () => {
+type Props = {
+  title: string
+}
+const foo = 'uyuyuy'
+
+function Home({ title = 'React Avancado! Udemy' }: Props) {
   return (
     <Container>
       <Head>
-        <title>Homepage</title>
+        <title>{title}</title>
       </Head>
 
-      <RocketseatLogo />
-      <h1>ReactJS Structure</h1>
-      <p>A ReactJS + Next.js structure made by Rocketseat.</p>
+      <h1>{title}</h1>
+      <p>A ReactJS + Next.js structure made by Rocketseat. and {title}</p>
     </Container>
   )
 }
