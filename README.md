@@ -19,9 +19,9 @@ This project uses lot of stuff as:
 ## Getting Started
 First, run the development server:
 ```bash
-```yarn
-npm run dev
-# or
+yarn set version 1.22.4 
+yarn create next-app -e https://github.com/murikao/nextjs-boilerplate
+cd <your-app>
 yarn dev
 ```
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.

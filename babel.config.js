@@ -1,8 +1,27 @@
 module.exports = {
-  plugins: [
-    // ["styled-components", { "ssr": true }],
-    ["babel-plugin-styled-components",{"ssr": true}],
+  "presets": ["next/babel", "@babel/preset-typescript"],
+  "plugins": [
+    [
+      "babel-plugin-styled-components",
+      {
+        "ssr": true,
+        "displayName": true
+      }
+    ],
+    
     "inline-react-svg"
   ],
-  presets: ["next/babel","@babel/preset-typescript"],
-};
+  "env": {
+    "test": {
+      "plugins": [
+        [
+          "babel-plugin-styled-components",
+          {
+            "ssr": false,
+            "displayName": false
+          }
+        ]
+      ]
+    }
+  }
+}
